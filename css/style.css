@@ -1,0 +1,452 @@
+/* Dependances Start */
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600&display=swap');
+/* Dependances End */
+
+/* Main CSS Start */
+:root
+{
+    /* Font Size Start */
+    --small-text-size: calc(var(--text-size) * 0.9);
+    --text-size: 2.2vmin;
+    --big-text-size: calc(var(--text-size) * 1.1);
+    --small-title-size: calc(var(--title-size) * 0.6);
+    --title-size: 4vmin;
+    --big-title-size: calc(var(--title-size) * 1.4); 
+    /* Font Size End */
+
+    /* Font Family Start */
+    --text-family: 'Bai Jamjuree', sans-serif;
+    --title-family: 'Bai Jamjuree', sans-serif;
+    /* Font Family End */
+
+    /* Colors Start */
+    --color-primary: hsl(171, 66%, 44%);
+    --color-secondary: hsl(233, 100%, 69%);
+    --color-tertiary: hsl(201, 11%, 66%);
+    --color-accent:  hsl(210, 10%, 33%);
+    --color-contrast: #fff;
+    /* Colors End */
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	text-decoration: inherit;
+	text-transform: inherit;
+	color: inherit;
+	list-style: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+body
+{
+	font-size: var(--text-size);
+	color: var(--color-accent);
+	list-style: none;
+	font-family: var(--text-family);
+	font-weight: 400;
+	text-decoration: none;
+    text-transform: none;
+}
+
+::-webkit-scrollbar 
+{
+    width: 7px;
+}
+
+::-webkit-scrollbar-track 
+{
+    background: white;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: var(--color-secondary);
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 480px), (orientation: portrait)
+{
+    :root
+    {
+        --text-size: 14px;
+        --title-size: 19px;
+        --small-title-size: calc(var(--title-size) * 0.9);
+        --big-title-size: calc(var(--title-size) * 1.2); 
+    }
+}
+
+/* Main CSS End */
+
+/* General CSS Start */
+.container-slim {
+    width: 45%;
+    margin: 0 auto;
+}
+.container-wide {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.paragraph{
+    color: lightsteelblue;
+    margin-bottom: 3rem;
+}
+
+.small-title {
+    font-size: var(--small-title-size);
+    font-weight: bold;
+    margin-bottom: .6rem;
+}
+
+.small-paragraph {
+    font-size: var(--small-text-size);
+    color: lightsteelblue;
+
+}
+
+.btn-blue {
+    background-color: var(--color-primary);
+    color: var(--color-contrast);
+    padding: .7rem 1.5rem;
+    font-size: var(--small-text-size);
+    font-weight: bold;
+    border-radius: 5rem;
+    margin: .2rem .5rem;
+    box-shadow: 0px 3px grey;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-purple {
+    background-color: var(--color-secondary);
+    color: var(--color-contrast);
+    padding: .7rem 1.5rem;
+    font-size: var(--small-text-size);
+    font-weight: bold;
+    border-radius: 5rem;
+    margin: .2rem .5rem;
+    box-shadow: 0px 3px grey;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-blue:hover{
+    scale: 1.03;
+}
+.btn-purple:hover{
+    scale:1.03;
+}
+
+@media only screen and (max-width: 900px),{
+    .container-slim{
+        width: 80%;
+    } 
+}
+
+@media only screen and (max-width: 480px), (orientation: portrait){
+    .btn-blue {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .btn-purple {
+        width: 100%;
+    }
+}
+
+/* General CSS End */
+
+
+/* Header Start */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-image: url('../images/bg-header-desktop.png');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+#logo{
+    width: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.header-content{
+    text-align: center;
+}
+.big-title{
+    font-size: var(--big-title-size);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+@media screen (max-width: 640 ){
+
+}
+
+@media only screen and (max-width: 480px), (orientation: portrait){
+    header {
+        height: 90vh;
+        background-image: url('../images/bg-header-mobile.png');
+    }
+    #logo{
+        width: 6rem;
+    }
+    .header-paragraph{
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+/* Header End */
+
+/* Main Start */
+
+    /* Section 2 */
+.secc02 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.medium-title{
+    font-size: var(--title-size);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+    /* Section 3 */
+.secc03{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    height: auto;
+    margin-bottom: 8rem;
+}
+.computer-container{
+    height: auto;
+    width: 50%;
+    position: relative;
+}
+
+#computer-img {
+    width: 110%;
+    position: relative;
+    left: -10%;
+}
+
+.computer-info {
+    width: 50%;
+    padding: 0 22% 0 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.computer-info-div{
+    margin-bottom: 2.5rem;
+}
+
+    /* Section 4 */
+.floating-text{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.devices-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+#devices-img{
+    width: 55%;
+}
+
+    /* Section 5 Features */
+.features-container{
+    display: flex;
+    margin-bottom: 8rem;
+}
+.features {
+    width: 40%;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.features-icon{
+    height: 2rem;
+    margin-bottom: 2rem;
+}
+
+    /* Section 6 Companies */
+.company-logos-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: 8rem;
+}
+.company-logo{
+    margin: 0 .5rem;
+}
+
+@media only screen and (max-width: 900px), (orientation: portrait){
+    .secc03{
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .computer-container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #computer-img{
+        width: 100%;
+        position: static;
+        margin-bottom: 3rem;
+    }
+    .computer-info{
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .computer-info-div{
+        text-align: center;
+    }
+    #devices-img{
+        width: 80%;
+    }
+    .company-logo{
+        width: 16%;
+    }
+}
+
+@media only screen and (max-width: 480px), (orientation: portrait){
+    .floating-text{
+        margin-bottom: 4rem;
+    }
+    .features-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    .features{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .company-logos-row{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    .company-logo{
+        width: 25vmin;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Main End */
+
+
+/* Footer Start */
+.footer-container{
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    padding: 2rem 0;
+    font-size: var(--small-text-size);
+    display: flex;
+    
+}
+.footer-row {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+.logo-footer{
+    width: 30%;
+}
+.footer-link-container{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.link-column{
+    width: 40%;
+}
+.footer-link{
+    display: block;
+    margin-bottom: 1.5rem;
+    color: grey;
+}
+.footer-link:hover{
+    color: var(--color-primary);
+}
+.social-row{
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    align-content: center;
+}
+.social-icon{
+    scale: 80%;
+    padding: 0 .2rem;
+    margin-bottom: 1.5rem;
+}
+.copyright{
+    font-size: 10px;
+    text-align: center;
+    padding: .5rem 2rem;
+    background-color: var(--color-primary);
+    color: white;
+    margin-top: auto;
+}
+
+@media only screen and (max-width: 480px), (orientation: portrait){
+    .footer-container{
+        display: inline-block;
+    }
+    .footer-row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo-footer-container{
+        width: 100%;
+        text-align: center;
+    }
+    .logo-footer{
+        margin: 0 auto;
+        width: 3rem;
+    }
+    .footer-link-container{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    .link-column{
+        margin: 2rem auto;
+    }
+    .social-row{
+        margin: 0 auto;
+    }
+}
+/* Footer End */
